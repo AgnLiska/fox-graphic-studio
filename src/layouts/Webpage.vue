@@ -17,11 +17,16 @@
         </q-toolbar-title>
         <q-btn
           icon="phone"
-          label="601 278 353"
+          :label="!$q.screen.xs ? '601 278 353' : ''"
           type="a"
           href="tel:+48601278353"
         />
-        <q-btn icon="email" type="a" href="mailto:biuro@fgs.pl" />
+        <q-btn
+          v-if="!$q.screen.xs"
+          icon="email"
+          type="a"
+          href="mailto:biuro@fgs.pl"
+        />
       </q-toolbar>
     </q-header>
     <q-drawer v-model="leftDrawerOpen" bordered content-class="bg-grey-1">
@@ -140,7 +145,6 @@ const layoutName = 'Webpage';
 export default class Webpage extends Vue {
   private leftDrawerOpen = false;
 
-  private apiKey = 'AIzaSyDisDuZkqoQHbeDQhkMqHuO_XTYVIQUyhM';
   private googleMapsLink =
   'https://www.google.pl/maps/dir//Fox+Graphic+Studio+%E2%80%93+Agencja+reklamowa,+Na+Ostrowiu+1,+80-873+Gda%C5%84sk/@54.3732974,18.6483619,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x46fd74be29f3bbed:0x3cffadd3158d191d!2m2!1d18.6505559!2d54.3732943!3e0';
 

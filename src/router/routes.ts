@@ -9,7 +9,7 @@ const routes: RouteConfig[] = [
       {
         path: '',
         component: (): Promise<typeof import('*.vue')> =>
-          import('pages/Home.vue')
+          import('pages/Contact.vue')
       }
     ]
   }

@@ -2,9 +2,9 @@
   <div class="row justify-center">
     <q-img
       class="col-5 logo"
-      src="/icons/icon-128x128.png"
-      srcset="/icons/icon-128x128.png 96w, /icons/icon-192x192.png 192w, /icons/icon-384x384.png 384w"
-      sizes="(max-width: 960px) 96w,
+      src="../../public/icons/icon-128x128.png"
+      srcset="../../public/icons/icon-128x128.png 128w, ../../public/icons/icon-192x192.png 192w, ../../public/icons/icon-384x384.png 384w"
+      sizes="(max-width: 960px) 128w,
             (max-width: 1440px) 192w,
             (min-width: 1440px) 384w"
       style="min-width:96px; max-width:384px"
