@@ -9,7 +9,6 @@
     "noImplicitReturns": true,
     "skipLibCheck": true
   },
-  "include": ["@types/**/*", "src/**/*", "test/jest/**/*.ts"],
-  "exclude": ["node_modules"],
-  "extends": "@quasar/app/tsconfig-preset"
+  "include": ["@types/**/*", "src/**/*"],
+  "exclude": ["node_modules"]
 }

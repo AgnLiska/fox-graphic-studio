@@ -3,8 +3,15 @@ import { RouteConfig } from 'vue-router';
 const routes: RouteConfig[] = [
   {
     path: '/',
-    component: () => import('layouts/Webpage.vue'),
-    children: [{ path: '', component: () => import('pages/Index.vue') }]
+    component: (): Promise<typeof import('*.vue')> =>
+      import('layouts/Webpage.vue'),
+    children: [
+      {
+        path: '',
+        component: (): Promise<typeof import('*.vue')> =>
+          import('pages/Home.vue')
+      }
+    ]
   }
 ];
 
